@@ -12,7 +12,7 @@ const Products = () => {
       <h1 className="text-3xl font-bold text-center mb-8">🛍️ Our Products</h1>
 
       {/* Responsive grid for product cards */}
-      <div className="grid gap-6 grid-cols-2 place-items-center md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid gap-6 grid-cols-1 place-items-center md:grid-cols-3 lg:grid-cols-4">
         {products.length > 0 ? (
           products.map((item) => (
             <ProductCard

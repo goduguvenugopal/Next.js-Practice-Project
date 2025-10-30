@@ -10,13 +10,13 @@ const ProductCard = ({id , image , title , description , price}) => {
        <div
               key={id}
               onClick={()=> {router.push(`/pages/products/${id}`)}}
-              className="bg-white shadow-md w-fit rounded-xl p-4 flex flex-col hover:scale-105 transition-transform"
+              className="bg-white shadow-md w-72 rounded-xl p-4 flex flex-col hover:scale-105 transition-transform"
             >
               <Image width={200}
               height={200}
                 src={image}
                 alt={title}
-                className="w-full h-48 object-contain mb-4"
+                className="w-48 h-48 object-contain mb-4"
               />
               <h2 className="font-semibold text-lg line-clamp-2 mb-2">
                 {title}
