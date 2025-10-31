@@ -32,11 +32,12 @@ const ProductOverView = () => {
 
   if (!overViewProduct.id) {
     return (
-      <div className="mt-10 pt-10 text-center">
-        <h5 className="flex justify-center gap-2 items-center text-2xl">
-          <FaSpinner className="animate-spin" /> Loading...
-        </h5>
+     <div className="flex h-screen items-center justify-center">
+      <div className="flex flex-col items-center">
+        <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+        <p className="mt-3 text-blue-600 font-medium">Loading product...</p>
       </div>
+    </div>
     );
   }
 

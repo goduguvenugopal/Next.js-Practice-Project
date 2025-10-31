@@ -18,7 +18,7 @@ const CategoryCard = ({ categoryName }) => {
 
   return (
     <div>
-      <h5 className="text-2xl font-bold">{categoryName}</h5>
+      <h5 className="text-2xl font-bold capitalize">{categoryName}</h5>
       <div className="overflow-x-auto hide-scrollbar">
         <div className="flex items-center gap-3 mt-2 mb-5">
           {filteredItems.map((item) => (

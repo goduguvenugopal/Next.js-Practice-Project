@@ -16,6 +16,8 @@ const Category = () => {
 
   return (
     <>
+
+    <h5 className="text-center text-2xl font-bold mt-10">Shop By Category</h5>
       <div className="my-10 p-3">
         {categories.map((item, index) => (
           <CategoryCard key={index} categoryName={item} />
