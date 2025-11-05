@@ -23,7 +23,7 @@ const Products = () => {
               description={item.description}
               price={item.price}
             />
-          ))
+          )).reverse()
         ) : (
           <p className="text-center col-span-full text-gray-600">
             Loading products...
