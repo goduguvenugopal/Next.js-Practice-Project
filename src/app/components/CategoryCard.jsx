@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useProducts } from "../context/ProductsProvider";
 import ProductCard from "./ProductCard";
+ 
 
 const CategoryCard = ({ categoryName }) => {
   const { products } = useProducts();
@@ -16,11 +17,13 @@ const CategoryCard = ({ categoryName }) => {
     setFilteredItems(filteredProducts);
   }, [categoryName, products]);
 
+ 
+
   return (
     <div>
       <h5 className="text-2xl font-bold capitalize">{categoryName}</h5>
-      <div className="overflow-x-auto hide-scrollbar">
-        <div className="flex items-center gap-3 mt-2 mb-5">
+      <div className="overflow-auto mt-10 hide-scrollbar">
+        <div className="flex gap-10 flex-nowrap w-fit p-10">
           {filteredItems.map((item) => (
             <ProductCard
               key={item.id}
