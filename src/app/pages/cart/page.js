@@ -1,11 +1,26 @@
+"use client";
 
-"use client"
-
+import CartProductCard from "@/app/components/CartProductCard";
+import { CartProductsContext } from "@/app/context/CartProvider";
+import { useContext } from "react";
+import { toast } from "react-toastify";
 
 const Cart = () => {
-  return (
-    <div>Cart</div>
-  )
-}
+  const { cart, setCart } = useContext(CartProductsContext);
 
-export default Cart
+  const removeEventListener = (id) => {
+    const remaining = cart.filter((item)=> item.id !== id)
+ setCart(remaining)
+ toast("Product removed from cart")
+ 
+  };
+
+  return (
+    <div>
+      {" "}
+      <CartProductCard cart={cart} removeFromCart={removeEventListener} />
+    </div>
+  );
+};
+
+export default Cart;

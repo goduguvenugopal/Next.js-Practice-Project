@@ -29,6 +29,8 @@ export async function generateMetadata({ params }) {
 
 export default async function fetchSingleProduct({ params }) {
   const { productId } = await params;
+  console.log(await params);
+  
 
   try {
     const res = await fetch(`https://fakestoreapi.com/products/${productId}`);
