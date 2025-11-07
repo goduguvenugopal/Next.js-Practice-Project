@@ -8,6 +8,7 @@ import {
   FaBoxOpen,
   FaBars,
   FaTimes,
+  FaBook,
 } from "react-icons/fa";
 import { useCart } from "../context/CartProvider";
 
@@ -40,6 +41,14 @@ export default function Navbar() {
               className="flex items-center gap-1 hover:text-gray-200"
             >
               <FaBoxOpen /> Products
+            </Link>
+          </li>
+           <li>
+            <Link
+              href="/pages/course"
+              className="flex items-center gap-1 hover:text-gray-200"
+            >
+              <FaBook />  Courses
             </Link>
           </li>
           <li>
@@ -89,6 +98,14 @@ export default function Navbar() {
               className="flex items-center gap-2 hover:text-gray-200"
             >
               <FaBoxOpen /> Products
+            </Link>
+          </li>
+           <li>
+            <Link
+              href="/pages/course"
+              className="flex items-center gap-1 hover:text-gray-200"
+            >
+              <FaBook />  Courses
             </Link>
           </li>
           <li>
